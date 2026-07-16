@@ -14,20 +14,6 @@
 
 
 
-SELECT o.order_purchase_timestamp,
-       op.payment_value
-FROM orders o
-JOIN order_payments op ON o.order_id = op.order_id
-LIMIT 10;
-
-
-SELECT year(o.order_purchase_timestamp),
-       month(o.order_purchase_timestamp),
-       op.payment_value
-FROM orders o
-JOIN order_payments op ON o.order_id = op.order_id
-LIMIT 10;
-
 -- Monthly Revenue health check table
 
 SELECT YEAR(o.order_purchase_timestamp) AS YEAR,
